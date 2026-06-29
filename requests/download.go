@@ -29,7 +29,7 @@ func DownloadRequest(client *http.Client, url string) error {
 	if err != nil {
 		return fmt.Errorf("Ошибка при записи содержимого файла!", err)
 	}
-	fmt.Printf("Файл успешно скачан!\n")
+	fmt.Printf("Статус: %d, Ответ: %s\n", resp.StatusCode, string(body))
 
 	return nil
 }

@@ -19,7 +19,7 @@ func DeleteRequest(client *http.Client, url string) error {
 	defer resp.Body.Close()
 
 	body, _ := io.ReadAll(resp.Body)
-	fmt.Print(string(body))
+	fmt.Printf("Статус: %d, Ответ: %s\n", resp.StatusCode, string(body))
 
 	return nil
 }

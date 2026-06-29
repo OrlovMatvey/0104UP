@@ -14,7 +14,7 @@ func ListRequest(client *http.Client, url string) error {
 	defer resp.Body.Close()
 
 	body, _ := io.ReadAll(resp.Body)
-	fmt.Printf("%v \n", string(body))
+	fmt.Printf("Статус: %d, Ответ: %s\n", resp.StatusCode, string(body))
 
 	return nil
 }
